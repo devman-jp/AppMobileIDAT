@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_entregas">
+    <fragment
+        android:id="@+id/navigation_entregas"
+        android:name="idat.dami.prueba.view.fragment.ListarEntregaFragment"
+        android:label="fragment_listar_entrega"
+        tools:layout="@layout/fragment_listar_entrega" />
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="idat.dami.prueba.view.fragment.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+</navigation>
