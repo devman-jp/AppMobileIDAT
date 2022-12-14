@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.fragment.ListarHistorialFragment">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHistorial"
+<ScrollView android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.ListarHistorialFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/edtFecha"
+            android:layout_width="303dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="18dp"
+            android:ems="10"
+            android:hint="Seleccione Fecha"
+            android:inputType="none"
+            app:layout_constraintBottom_toTopOf="@+id/btnHistorial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnHistorial"
+            android:layout_width="215dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="35dp"
+            android:text="Buscar"
+            app:layout_constraintBottom_toTopOf="@+id/rvHistorial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtFecha" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistorial"
+            android:layout_width="385dp"
+            android:layout_height="527dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHistorial" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
