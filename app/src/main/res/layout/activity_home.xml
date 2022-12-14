@@ -7,6 +7,8 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
+        app:itemTextColor="@color/fondo_activity"
+        app:itemIconTint="@color/fondo_activity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:itemBackground="@color/fondo_nigationbar"

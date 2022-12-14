@@ -4,6 +4,7 @@
     <item
         android:id="@+id/navigation_entregas"
         android:title="@string/title_entregas"
+        
         android:icon="@drawable/ic_baseline_backpack_24"/>
 
     <item

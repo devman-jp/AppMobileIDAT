@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
+    android:background="@color/fondo_activity"
     tools:context=".view.LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -13,8 +14,10 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/fondo_nigationbar"
+        app:hintTextColor="@color/texto_navigationbar"
         android:layout_marginBottom="39dp"
-        android:textColorHint="@color/color_gris_500"
+        android:textColorHint="@color/texto_navigationbar"
         app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,14 +27,21 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etusuario"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginStart="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:hint="@string/valetusuario" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnlogin"
         android:layout_width="0dp"
+        android:backgroundTint="#F7FB4D16"
+        android:textColor="@color/texto_navigationbar"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginBottom="164dp"
         android:text="@string/valbtnlogin"
@@ -44,8 +54,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="371dp"
         android:layout_height="wrap_content"
+
         android:layout_marginBottom="247dp"
-        android:textColorHint="@color/color_gris_500"
+
+        app:boxStrokeColor="@color/fondo_nigationbar"
+        app:hintTextColor="@color/texto_navigationbar"
+        android:textColorHint="@color/texto_navigationbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +69,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etpassword"
             android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:hint="@string/valetpassword"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
