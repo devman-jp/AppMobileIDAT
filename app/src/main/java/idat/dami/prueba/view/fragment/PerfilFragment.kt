@@ -39,7 +39,7 @@ class PerfilFragment : Fragment() {
             viewLifecycleOwner, Observer {
                     response ->
                 response?.let {
-                    binding.tvNombreRepartidor.text = response.nombre
+                    binding.tvNombreRepartidor.text = response.nombre + " " + response.apellido
                     binding.tvEmailRepartidor.text = response.correo
                     binding.tvTelefonoRepartidor.text = response.telefono
                 }

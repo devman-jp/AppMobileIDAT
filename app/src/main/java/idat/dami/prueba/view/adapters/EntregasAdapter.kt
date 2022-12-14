@@ -36,6 +36,7 @@ class EntregasAdapter(private var lstentregas: List<ResponseEntrega>)
                     val distrito = paquete.consignado.distrito
                     val telefono = paquete.consignado.telefono
                     val codigocaja = paquete.idPaquete
+                    val codentrega = idEntrega
                     val context = binding.root.context
                     val intent = Intent(context, DetalleEntregaActivity::class.java)
                     intent.putExtra("REMITENTE",remitente)
@@ -44,6 +45,7 @@ class EntregasAdapter(private var lstentregas: List<ResponseEntrega>)
                     intent.putExtra("DISTRITO", distrito)
                     intent.putExtra("TELEFONO", telefono)
                     intent.putExtra("CODIGOCAJA", codigocaja)
+                    intent.putExtra("CODENTREGA", codentrega)
                     context.startActivity(intent)
 
                 }

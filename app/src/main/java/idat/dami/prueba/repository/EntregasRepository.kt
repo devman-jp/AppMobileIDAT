@@ -10,6 +10,7 @@ import retrofit2.Response
 
 class EntregasRepository {
     var responseEntrega = MutableLiveData<List<ResponseEntrega>>()
+    var entregaResponse =MutableLiveData<ResponseEntrega>()
 
     fun listarEntregas(token: String?): MutableLiveData<List<ResponseEntrega>> {
         val call: Call<List<ResponseEntrega>> =
@@ -29,4 +30,25 @@ class EntregasRepository {
         })
         return responseEntrega
     }
+
+    fun confirmarEntregas(token: String?, idEntrega: Int):
+            MutableLiveData<ResponseEntrega> {
+
+        val call : Call<ResponseEntrega> = AzCourierCliente
+            .retrofitService.confirmarEntregas("Bearer " + token, idEntrega)
+        call.enqueue(object : Callback<ResponseEntrega>{
+            override fun onResponse(
+                call: Call<ResponseEntrega>,
+                response: Response<ResponseEntrega>
+            ) {
+                entregaResponse.value = response.body()
+            }
+
+            override fun onFailure(call: Call<ResponseEntrega>, t: Throwable) {
+
+            }
+        })
+        return entregaResponse
+    }
+
 }

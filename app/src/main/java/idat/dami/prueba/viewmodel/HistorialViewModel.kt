@@ -9,7 +9,7 @@ class HistorialViewModel: ViewModel() {
 
     private var repository = HistorialRepository()
 
-    fun listarHistorial(fecha: String) : LiveData<List<ResponseEntrega>> {
-        return repository.listarHistorial(fecha)
+    fun listarHistorial(token: String?, fecha: String) : LiveData<List<ResponseEntrega>> {
+        return repository.listarHistorial(token, fecha)
     }
 }

@@ -9,6 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import idat.dami.prueba.databinding.FragmentListarHistorialBinding
+import idat.dami.prueba.retrofit.AzSessionManager
+import idat.dami.prueba.utilitarios.MiApp
 import idat.dami.prueba.view.adapters.HistorialAdapter
 import idat.dami.prueba.viewmodel.HistorialViewModel
 
@@ -18,6 +20,8 @@ class ListarHistorialFragment : Fragment() {
     private var _binding : FragmentListarHistorialBinding? = null
     private val binding get() = _binding!!
     private lateinit var historialViewModel: HistorialViewModel
+    private var sessionManager = AzSessionManager(MiApp.applicationContext)
+    var token: String? = "";
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +33,15 @@ class ListarHistorialFragment : Fragment() {
             requireActivity())
         historialViewModel = ViewModelProvider(requireActivity())
             .get(HistorialViewModel::class.java)
-        listarHistorial()
+
+        token = sessionManager.fetchAuthToken();
+        listarHistorial(token)
 
         return binding.root
     }
 
-    fun listarHistorial(){
-        historialViewModel.listarHistorial("29-11-2022").observe(
+    fun listarHistorial(tokenAuth: String?){
+        historialViewModel.listarHistorial(tokenAuth,"30-11-2022").observe(
             viewLifecycleOwner, Observer {
                     response -> binding.rvHistorial.adapter = HistorialAdapter(response)
             }

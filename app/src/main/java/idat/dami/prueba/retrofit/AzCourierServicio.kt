@@ -34,7 +34,10 @@ interface AzCourierServicio {
     fun listarRemitentes(): Call<List<ResponseRemitente>>
 
     @GET("v1/entrega/historial/{fecha}")
-    fun listarHistorial(@Path("fecha") fecha: String): Call<List<ResponseEntrega>>
+    fun listarHistorial(@Header("Authorization") token: String, @Path("fecha") fecha: String): Call<List<ResponseEntrega>>
 
+    @POST("v1/entrega/confirmar/{id}")
+    fun confirmarEntregas(@Header("Authorization") token: String, @Path("id") id: Int)
+            :Call<ResponseEntrega>
 
 }

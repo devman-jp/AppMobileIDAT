@@ -11,9 +11,9 @@ class HistorialRepository {
 
     var responseEntrega = MutableLiveData<List<ResponseEntrega>>()
 
-    fun listarHistorial(fecha: String): MutableLiveData<List<ResponseEntrega>> {
+    fun listarHistorial(token: String?, fecha: String): MutableLiveData<List<ResponseEntrega>> {
         val call: Call<List<ResponseEntrega>> =
-            AzCourierCliente.retrofitService.listarHistorial(fecha)
+            AzCourierCliente.retrofitService.listarHistorial("Bearer " + token, fecha)
         call.enqueue(object : Callback<List<ResponseEntrega>> {
             override fun onResponse(
                 call: Call<List<ResponseEntrega>>,

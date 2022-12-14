@@ -28,7 +28,12 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         sessionManager = AzSessionManager(this)
         binding.btnlogin.setOnClickListener(this)
         authViewModel.responseLogin.observe(this, Observer {
-                response -> obtenerDatosLogin(response)
+                response ->
+            response?.let {
+                obtenerDatosLogin(response)
+            };
+            AppMensaje.enviarMensaje(binding.root,
+                "Usuario y/o contraseña incorrectas.", TipoMensaje.ERROR);
         })
     }
 
@@ -36,9 +41,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         if(response.access_token.isNotEmpty()) {
             sessionManager.saveAuthToken(response.access_token)
             startActivity(Intent(applicationContext, HomeActivity::class.java))
-        } else {
-            AppMensaje.enviarMensaje(binding.root,
-                "Usuario y/o contraseña incorrectas.", TipoMensaje.ERROR)
         }
         binding.btnlogin.isEnabled = true
     }
