@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo_activity"
     tools:context=".view.fragment.PerfilFragment">
 
 
@@ -38,6 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="pedro.01"
+        android:textColor="@color/texto_navigationbar"
+        android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +55,8 @@
         android:layout_height="37dp"
         android:text="pedro@gmail.com"
         android:textSize="20sp"
+        android:textColor="@color/texto_navigationbar"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.827"
@@ -65,6 +70,8 @@
         android:layout_height="30dp"
         android:text="987654321"
         android:textSize="20sp"
+        android:textColor="@color/texto_navigationbar"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.606"

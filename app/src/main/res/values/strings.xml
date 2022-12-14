@@ -27,4 +27,15 @@
     <string name="fragment_entregas">Entregas</string>
     <string name="fragment_historial">Historial</string>
     <string name="fragment_perfil">Perfil</string>
+
+    <string name="titulodetallehistoria">Detalle Historial</string>
+    <string name="titulodetalleentrega">DETALLE DE ENTREGA</string>
+    <string name="remitente">Remitente:</string>
+    <string name="consignado">Consignado:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="distrito">Distrito:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="codigo">Codigo:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="estado">Estado:</string>
 </resources>

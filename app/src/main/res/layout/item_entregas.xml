@@ -5,63 +5,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="3dp"
-    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/fondo_activity"
+    app:cardCornerRadius="20dp"
+    app:strokeColor="@color/fondo_nigationbar"
+    app:strokeWidth="2dp"
+    app:cardElevation="1dp"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="383dp"
+        android:layout_height="122dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iventrega"
             android:layout_width="129dp"
             android:layout_height="102dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/cajaabierta"
-            />
+            app:civ_circle_background_color="@color/fondo_activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/remitente"
+
+            android:textColor="@color/texto_navigationbar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvnombresRemitente"
+            app:layout_constraintStart_toEndOf="@+id/iventrega"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvnombresRemitente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="45dp"
             android:text="TextView"
+            android:textColor="@color/texto_navigationbar"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iventrega"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/consignado"
+
+            android:textColor="@color/texto_navigationbar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvnombresConsignado"
+            app:layout_constraintStart_toEndOf="@+id/iventrega"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/tvnombresConsignado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="45dp"
             android:text="TextView"
+            android:textColor="@color/texto_navigationbar"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iventrega"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/tvnombresRemitente" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/direccion"
+            android:textColor="@color/texto_navigationbar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvdireccionConsignado"
+            app:layout_constraintStart_toEndOf="@+id/iventrega"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/tvdireccionConsignado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="45dp"
             android:text="TextView"
+
+            android:textColor="@color/texto_navigationbar"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iventrega"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/tvnombresConsignado" />
 
 
