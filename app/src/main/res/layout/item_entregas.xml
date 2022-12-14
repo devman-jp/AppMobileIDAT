@@ -22,7 +22,7 @@
             android:layout_height="102dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/cajaabierta"
+            android:src="@drawable/courier"
             app:civ_circle_background_color="@color/fondo_activity"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

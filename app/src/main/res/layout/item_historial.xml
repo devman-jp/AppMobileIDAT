@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="3dp"
+    app:cardBackgroundColor="@color/fondo_activity"
+    app:cardCornerRadius="20dp"
+    app:strokeColor="@color/fondo_nigationbar"
+    app:strokeWidth="2dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true">
 
@@ -29,6 +32,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="149dp"
             android:text="TextView"
+            android:textColor="@color/texto_navigationbar"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvNomApeRemitenteH"
@@ -41,6 +45,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
             android:text="TextView"
+
+            android:textColor="@color/texto_navigationbar"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvDireccionRemitenteH"
             app:layout_constraintStart_toStartOf="@+id/tvNomApeConsignadoH"
             app:layout_constraintTop_toBottomOf="@+id/tvNomApeConsignadoH" />
@@ -50,6 +58,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+
+            android:textColor="@color/texto_navigationbar"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:text="TextView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvNomApeRemitenteH"
