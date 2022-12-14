@@ -24,4 +24,7 @@
     <string name="valetpassword">Ingrese su password</string>
     <string name="valbtnlogin">INICIE SESION</string>
     <string name="msgloginincompleto">Usuario y password son obligatorios</string>
+    <string name="fragment_entregas">Entregas</string>
+    <string name="fragment_historial">Historial</string>
+    <string name="fragment_perfil">Perfil</string>
 </resources>

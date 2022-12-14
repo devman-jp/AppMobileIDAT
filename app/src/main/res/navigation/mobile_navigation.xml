@@ -7,11 +7,16 @@
     <fragment
         android:id="@+id/navigation_entregas"
         android:name="idat.dami.prueba.view.fragment.ListarEntregaFragment"
-        android:label="fragment_listar_entrega"
+        android:label="@string/fragment_entregas"
         tools:layout="@layout/fragment_listar_entrega" />
     <fragment
         android:id="@+id/navigation_perfil"
         android:name="idat.dami.prueba.view.fragment.PerfilFragment"
-        android:label="fragment_perfil"
+        android:label="@string/fragment_perfil"
         tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/navigation_historial"
+        android:name="idat.dami.prueba.view.fragment.ListarHistorialFragment"
+        android:label="@string/fragment_historial"
+        tools:layout="@layout/fragment_listar_historial" />
 </navigation>
