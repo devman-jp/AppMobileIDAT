@@ -1,6 +1,7 @@
 package idat.dami.prueba.view
 
 import android.os.Bundle
+import android.view.KeyEvent
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -33,4 +34,7 @@ class HomeActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+
+
 }
