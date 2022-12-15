@@ -80,7 +80,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onBackPressed() {
-        val cerrar = Intent(applicationContext,HomeActivity::class.java)
+        val cerrar = Intent(applicationContext,LoginActivity::class.java)
         startActivity(cerrar)
     }
 }
