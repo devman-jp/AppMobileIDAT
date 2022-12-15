@@ -65,10 +65,8 @@ class PerfilFragment : Fragment(), View.OnClickListener {
     private fun cerrarSesion() {
         val cerrar = Intent(activity,LoginActivity::class.java)
         startActivity(cerrar)
-
-
-
     }
+
 
 
 

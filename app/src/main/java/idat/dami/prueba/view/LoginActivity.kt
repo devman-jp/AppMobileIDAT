@@ -77,4 +77,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         }
         return okValidacion
     }
+
+    override fun onBackPressed() {
+        val cerrar = Intent(applicationContext,LoginActivity::class.java)
+        startActivity(cerrar)
+    }
 }
