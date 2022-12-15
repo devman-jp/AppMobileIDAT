@@ -25,9 +25,9 @@ class HistorialAdapter (private var listarHistorial: List<ResponseEntrega>)
         with(holder){
             with(listarHistorial[position]){
                 binding.ivHistorial.drawable
-                binding.tvNomApeConsignadoH.text = paquete.consignado.nombre.toString() + " " + paquete.consignado.apellido.toString()
-                binding.tvNomApeRemitenteH.text = paquete.remitente.nombre.toString() + " " + paquete.remitente.apellido.toString()
-                binding.tvDireccionRemitenteH.text = paquete.consignado.direccion.toString()
+                binding.tvNomApeConsignadoH.text = "Consignado: "+paquete.consignado.nombre.toString() + " " + paquete.consignado.apellido.toString()
+                binding.tvNomApeRemitenteH.text = "Remitente: "+paquete.remitente.nombre.toString() + " " + paquete.remitente.apellido.toString()
+                binding.tvDireccionRemitenteH.text = "Direccion: "+paquete.consignado.direccion.toString()
                 binding.root.setOnClickListener{
                     val remitente = paquete.remitente.nombre +" "+ paquete.remitente.apellido
                     val consignado = paquete.consignado.nombre + " " + paquete.consignado.apellido

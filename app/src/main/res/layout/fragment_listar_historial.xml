@@ -6,6 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="50dp"
         tools:context=".view.fragment.ListarHistorialFragment">
 
         <TextView
@@ -13,10 +14,17 @@
             android:layout_width="303dp"
             android:layout_height="52dp"
             android:layout_marginStart="69dp"
+            android:textColor="@color/fondo_nigationbar"
+            android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
             android:layout_marginTop="38dp"
             android:layout_marginEnd="69dp"
             android:layout_marginBottom="18dp"
             android:ems="10"
+            android:textSize="20dp"
+            android:textColorHint="@color/fondo_nigationbar"
+            android:textAlignment="center"
+            android:gravity="center"
+
             android:hint="Seleccione Fecha"
             android:inputType="none"
             app:layout_constraintBottom_toTopOf="@+id/btnHistorial"
@@ -27,8 +35,10 @@
         <Button
             android:id="@+id/btnHistorial"
             android:layout_width="215dp"
+            android:textColor="@color/texto_navigationbar"
             android:layout_height="63dp"
             android:layout_marginBottom="35dp"
+            android:backgroundTint="@color/botones"
             android:text="Buscar"
             app:layout_constraintBottom_toTopOf="@+id/rvHistorial"
             app:layout_constraintEnd_toEndOf="parent"
