@@ -16,7 +16,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import idat.dami.prueba.R
 import idat.dami.prueba.databinding.FragmentListarHistorialBinding
 import idat.dami.prueba.retrofit.AzSessionManager
+import idat.dami.prueba.utilitarios.AppMensaje
 import idat.dami.prueba.utilitarios.MiApp
+import idat.dami.prueba.utilitarios.TipoMensaje
 import idat.dami.prueba.view.adapters.HistorialAdapter
 import idat.dami.prueba.viewmodel.HistorialViewModel
 import java.text.SimpleDateFormat
@@ -60,10 +62,15 @@ class ListarHistorialFragment : Fragment(), View.OnClickListener, DatePickerDial
 
     fun listarHistorial(tokenAuth: String?){
         fecha = binding.edtFecha.text.toString();
-        Log.println(Log.DEBUG, "FECHA: ", fecha)
-        historialViewModel.listarHistorial(tokenAuth,fecha).observe(
+        historialViewModel.listarHistorial(tokenAuth, fecha).observe(
             viewLifecycleOwner, Observer {
-                    response -> binding.rvHistorial.adapter = HistorialAdapter(response)
+                    response -> run {
+                        if(response?.size == null) {
+                            AppMensaje.enviarMensaje(binding.root, "Ingrese una fecha válida", TipoMensaje.ERROR)
+                        } else {
+                            binding.rvHistorial.adapter = HistorialAdapter(response)
+                        }
+                }
             }
         )
     }
