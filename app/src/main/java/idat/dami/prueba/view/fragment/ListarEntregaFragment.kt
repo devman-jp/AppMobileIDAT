@@ -1,10 +1,14 @@
 package idat.dami.prueba.view.fragment
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,8 +36,19 @@ class ListarEntregaFragment : Fragment() {
         entregasViewModel = ViewModelProvider(requireActivity()).get(EntregasViewModel::class.java)
         var token: String? = sessionManager.fetchAuthToken();
         listarEntregas(token)
+        cargar()
 
         return binding.root
+    }
+
+    private fun cargar() {
+        var token: String? = sessionManager.fetchAuthToken();
+        binding.swipe.setOnRefreshListener {
+            listarEntregas(token)
+            Handler(Looper.getMainLooper()).postDelayed({
+                binding.swipe.isRefreshing = false
+            },2000)
+        }
     }
 
     fun listarEntregas(token: String?){
@@ -43,5 +58,12 @@ class ListarEntregaFragment : Fragment() {
             }
         )
     }
+
+
+
+
+
+
+
 
 }
