@@ -1,5 +1,6 @@
 package idat.dami.prueba.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -33,6 +34,11 @@ class HomeActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun onBackPressed() {
+        val cerrar = Intent(applicationContext,HomeActivity::class.java)
+        startActivity(cerrar)
     }
 
 

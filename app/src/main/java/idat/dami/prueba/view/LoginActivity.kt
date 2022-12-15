@@ -12,6 +12,7 @@ import idat.dami.prueba.retrofit.AzSessionManager
 import idat.dami.prueba.retrofit.response.ResponseLogin
 import idat.dami.prueba.utilitarios.AppMensaje
 import idat.dami.prueba.utilitarios.TipoMensaje
+import idat.dami.prueba.view.fragment.PerfilFragment
 import idat.dami.prueba.viewmodel.AuthViewModel
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
@@ -79,7 +80,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onBackPressed() {
-        val cerrar = Intent(applicationContext,LoginActivity::class.java)
+        val cerrar = Intent(applicationContext,HomeActivity::class.java)
         startActivity(cerrar)
     }
 }
